@@ -7,7 +7,7 @@ import os, sys
 
 driver = webdriver.Chrome('C:/driver/chromedriver.exe')
 
-"""""
+"""
 if getattr(sys, 'frozen', False):
 	chromedriver_path = os.path.join(sys._MEIPASS, "chromedriver.exe")
 	driver = webdriver.Chrome(chromedriver_path)
