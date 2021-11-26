@@ -1,2 +1,2 @@
 ## UOL-SIS-Survey
-University of Lahore SIS Survey Automation. https://bit.ly/UOL-SIS-Automation
+University of Lahore UOL Automation SIS Survey. https://bit.ly/UOL-SIS-Automation
