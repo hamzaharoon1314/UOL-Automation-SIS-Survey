@@ -1,19 +1,18 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import  Keys
 import time
-import keyboard
 import os, sys
 
-driver = webdriver.Chrome('C:/driver/chromedriver.exe')
+# Testing chrome driver with path
+# Old Code for Chrome
+"""
+ driver = webdriver.Chrome('C:/driver/chromedriver.exe')
+"""
 
-"""
-if getattr(sys, 'frozen', False):
-	chromedriver_path = os.path.join(sys._MEIPASS, "chromedriver.exe")
-	driver = webdriver.Chrome(chromedriver_path)
-else:
-	driver = webdriver.Chrome()
-"""
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.minimize_window()
 # Program main code here
 print("Wait for 5 Second Please: UOL Server is Busy")
@@ -56,7 +55,7 @@ if METHOD == 'y' or METHOD == 'YES' or METHOD == 'Y' or METHOD == 'yes':
     curl = driver.current_url
     if curl == "http://sis.uol.edu.pk/sis/MainForms/MainForm.aspx":
         driver.quit()
-        quit()
+        sys.exit()
 
 else:
     print("---------------PUT URL (Example:http://survey.uol.edu.pk/survey/account/userprofile.aspx?key=xxxx)---------------")
