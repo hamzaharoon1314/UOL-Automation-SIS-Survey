@@ -1,4 +1,5 @@
 from selenium import webdriver
+import sys
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import  Keys
@@ -38,7 +39,7 @@ if METHOD == 'y' or METHOD == 'YES' or METHOD == 'Y' or METHOD == 'yes':
         print("Comment is Must:")
         time.sleep(2)
         driver.quit()
-        quit()
+        sys.exit()
 
     User_input = driver.find_element_by_xpath('//*[@id="txtUserName"]')
     User_input.send_keys(USERNAME)
@@ -65,7 +66,7 @@ else:
         print("Comment is Must:")
         time.sleep(2)
         driver.quit()
-        quit()
+        sys.exit()
     driver.get(url)
     driver.maximize_window()
     time.sleep(1)
